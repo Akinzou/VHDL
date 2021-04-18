@@ -43,7 +43,7 @@ architecture Behavioral of main is
     process(CLK)
      variable x : boolean := false;
     begin
-        if rising_edge(CLK) then
+        if rising_edge(CLK) then --or (CLK = '1')
             if x then
                 x := not (x);
                 LED <= (others => '1');
